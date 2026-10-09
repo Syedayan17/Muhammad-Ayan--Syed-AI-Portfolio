@@ -1,1 +1,140 @@
+# NewsBot Intelligence System
 
+## Project Overview
+
+The NewsBot Intelligence System is a Natural Language Processing (NLP) project that analyzes news articles using machine learning and text analysis techniques. It explores news category classification, sentiment analysis, and named entity recognition to extract useful information from news content.
+
+## Problem Statement
+
+News articles contain large amounts of text that can be difficult to organize and analyze manually. This project explores how NLP and machine learning can automatically categorize articles, identify sentiment, and extract important names, organizations, locations, and other entities.
+
+## Approach
+
+The project follows these steps:
+
+1. Load and explore the news article dataset.
+2. Clean and preprocess the text data.
+3. Train a machine learning model to classify news categories.
+4. Evaluate the classifier using accuracy, precision, recall, and F1-score.
+5. Perform sentiment analysis to identify positive, neutral, and negative text.
+6. Use Named Entity Recognition (NER) to extract people, organizations, locations, dates, and other entities.
+7. Review the results and identify opportunities to improve model performance.
+
+## Dataset
+
+The project uses a news dataset containing article text and category labels.
+
+The dataset includes multiple categories, such as:
+
+- Politics
+- Wellness
+- Entertainment
+- Parenting
+- Style and Beauty
+- Travel
+- Healthy Living
+
+The dataset contains 937 articles across seven categories. The original dataset should be credited according to its source, and any redistribution should follow the applicable license and terms.
+
+## Machine Learning Model
+
+A text classification model was developed to predict the category of a news article. The project also uses NLP techniques to analyze sentiment and recognize named entities.
+
+### News Classification
+
+The initial classifier achieved approximately 54% accuracy. After improvements to the classification approach, accuracy increased to approximately 79% on a test set of 188 articles.
+
+The improved model demonstrated better overall performance across the news categories.
+
+### Sentiment Analysis
+
+Sentiment analysis was used to examine the emotional tone of the articles.
+
+The dataset's sentiment results were:
+
+- Positive: 432 articles
+- Neutral: 398 articles
+- Negative: 107 articles
+
+### Named Entity Recognition
+
+spaCy was used to identify entities within the news text, including:
+
+- PERSON: People
+- ORG: Organizations
+- DATE: Dates
+- GPE: Countries, cities, and other geopolitical locations
+- CARDINAL: Numerical quantities
+
+The extracted entities provide additional information about the people, organizations, places, and events mentioned in the articles.
+
+## Results
+
+The improved news classification model achieved the following results on the test set:
+
+| Metric | Initial Model | Improved Model |
+|---|---:|---:|
+| Accuracy | 54% | 79% |
+| Macro Precision | 0.79 | 0.81 |
+| Macro Recall | 0.38 | 0.74 |
+| Macro F1-score | 0.41 | 0.75 |
+| Weighted F1-score | 0.47 | 0.79 |
+
+The improved model achieved better accuracy and more balanced performance across categories. The increase in macro recall and macro F1-score suggests that the model became more effective at recognizing categories beyond those with the most training examples.
+
+Some categories remained more challenging than others, demonstrating the importance of class distribution, preprocessing, and model evaluation.
+
+## Key Findings and Learning Outcomes
+
+This project provided practical experience with NLP, text preprocessing, machine learning classification, sentiment analysis, and named entity recognition.
+
+The comparison between the initial and improved classifiers showed the importance of evaluating more than accuracy. Macro-averaged metrics were useful for understanding how well the model performed across different categories.
+
+The project also demonstrated how NLP can transform unstructured news text into structured information that can support search, organization, and further analysis.
+
+## Technologies Used
+
+- Python
+- pandas
+- NumPy
+- scikit-learn
+- spaCy
+- Natural Language Processing
+- Sentiment Analysis
+- Named Entity Recognition
+- Jupyter Notebook
+- Google Colab
+- Matplotlib, if used for visualizations
+
+## How to Run
+
+1. Open the project notebook in Google Colab or Jupyter Notebook.
+2. Upload or configure access to the dataset used in the project.
+3. Install the required Python libraries if they are not already available.
+4. Run the notebook cells in order.
+5. Review the classification report, sentiment results, entity extraction results, and any visualizations.
+
+Check the notebook for the exact dataset source and package requirements.
+
+## Limitations
+
+The model's predictions depend on the dataset, category distribution, and text preprocessing methods. Some categories may be harder to classify because of limited examples or similarities in article content. Sentiment analysis and entity recognition may also make errors depending on context and wording.
+
+This project is an educational prototype and should not be treated as a fully automated news verification system.
+
+## Future Improvements
+
+- Experiment with transformer-based text classification.
+- Improve performance on underrepresented categories.
+- Add a search feature for finding related articles.
+- Explore automatic news summarization.
+- Develop a conversational interface for interacting with news content.
+- Evaluate the system on additional news datasets.
+
+## Author
+
+**Syed Ayan**  
+Applied AI and Robotics Student  
+Houston Community College
+
+**Portfolio:** Add your GitHub portfolio link here.
